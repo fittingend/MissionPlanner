@@ -6,6 +6,9 @@
 #include <lanelet2_routing/RoutingGraph.h>
 #include <lanelet2_routing/Route.h>
 
+#include <lanelet2_core/geometry/Lanelet.h>
+#include <lanelet2_core/geometry/Point.h>
+
 #include <iostream>
 #include <limits>
 #include <algorithm>
@@ -119,6 +122,30 @@ LaneletRoute DefaultPlannerCore::plan(const RoutePoints & points)
 
   auto start_ll = start_lanelets.front();
   auto goal_ll  = goal_lanelets.front();
+
+
+  // --- 디버그: start/goal 에서 가장 가까운 lanelet 찾기 ---
+  auto nearest_start = map_->laneletLayer.nearest(start_pt, 1);
+  auto nearest_goal  = map_->laneletLayer.nearest(goal_pt, 1);
+
+  if (!nearest_start.empty()) {
+    const auto & ll = nearest_start.front();
+    double dist = lanelet::geometry::distance2d(ll, start_pt);
+    std::cout << "  nearest lanelet to START: id=" << ll.id()
+              << ", distance2d=" << dist << " m\n";
+  } else {
+    std::cout << "  nearest lanelet to START: <none>\n";
+  }
+
+  if (!nearest_goal.empty()) {
+    const auto & ll = nearest_goal.front();
+    double dist = lanelet::geometry::distance2d(ll, goal_pt);
+    std::cout << "  nearest lanelet to GOAL : id=" << ll.id()
+              << ", distance2d=" << dist << " m\n";
+  } else {
+    std::cout << "  nearest lanelet to GOAL : <none>\n";
+  }
+
 
   // 3) RoutingGraph로 route 계산
   auto route = routing_graph_->getRoute(start_ll, goal_ll);

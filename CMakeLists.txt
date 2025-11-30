@@ -1,44 +1,37 @@
 cmake_minimum_required(VERSION 3.10)
-project(standalone_mission_planner LANGUAGES CXX)
+project(standalone_planner)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+# ----------------------------------------------------------------------
+# 1) Lanelet2 서브프로젝트 추가
+# ----------------------------------------------------------------------
+add_subdirectory(external/Rosless-Lanelet2)
 
-# add_library(planner_core STATIC
-#   src/mission_planner_core.cpp
-#   src/default_planner_core.cpp
-#   src/arrival_checker_core.cpp
-# )
-
-# add_executable(planner_demo
-#   src/main.cpp
-# )
-
-# target_link_libraries(planner_demo
-#   planner_core
-# )
-
-# lanelet2 include / lib 경로 추가
-include_directories(/opt/rosless-lanelet2/include)
-include_directories(/usr/include/eigen3)
-link_directories(/opt/rosless-lanelet2/lib)
-
-# 🔹 Eigen3 찾기
-find_package(Eigen3 REQUIRED)
-
+# ----------------------------------------------------------------------
+# 2) standalone executable
+# ----------------------------------------------------------------------
 add_executable(mission_planner
-  src/main.cpp
-  src/mission_planner_core.cpp
-  src/default_planner_core.cpp
-  src/arrival_checker_core.cpp
+    src/main.cpp
+    src/default_planner_core.cpp
+    src/arrival_checker_core.cpp
+    src/mission_planner_core.cpp
 )
 
-target_link_libraries(mission_planner
-  lanelet2_core
-  lanelet2_io
-  lanelet2_projection
-  lanelet2_routing
-  lanelet2_traffic_rules
+target_include_directories(mission_planner PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/lanelet2
+)
+
+# ----------------------------------------------------------------------
+# 3) lanelet2 라이브러리 링크
+# ----------------------------------------------------------------------
+target_link_libraries(mission_planner PRIVATE
+    lanelet2_core
+    lanelet2_io
+    lanelet2_projection
+    lanelet2_routing
+    lanelet2_traffic_rules
+    # validation은 필요없으면 빼도 OK
 )

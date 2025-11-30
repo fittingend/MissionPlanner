@@ -83,24 +83,10 @@ CMakeFiles/mission_planner.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mission_planner.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sujin/Documents/01_GIT/standalone_planner/src/main.cpp -o CMakeFiles/mission_planner.dir/src/main.cpp.s
 
-CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o: CMakeFiles/mission_planner.dir/flags.make
-CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o: ../src/mission_planner_core.cpp
-CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o: CMakeFiles/mission_planner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o -MF CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o.d -o CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o -c /home/sujin/Documents/01_GIT/standalone_planner/src/mission_planner_core.cpp
-
-CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sujin/Documents/01_GIT/standalone_planner/src/mission_planner_core.cpp > CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.i
-
-CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sujin/Documents/01_GIT/standalone_planner/src/mission_planner_core.cpp -o CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.s
-
 CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o: CMakeFiles/mission_planner.dir/flags.make
 CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o: ../src/default_planner_core.cpp
 CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o: CMakeFiles/mission_planner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o -MF CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o.d -o CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o -c /home/sujin/Documents/01_GIT/standalone_planner/src/default_planner_core.cpp
 
 CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.i: cmake_force
@@ -114,7 +100,7 @@ CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.s: cmake_force
 CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o: CMakeFiles/mission_planner.dir/flags.make
 CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o: ../src/arrival_checker_core.cpp
 CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o: CMakeFiles/mission_planner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o -MF CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o.d -o CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o -c /home/sujin/Documents/01_GIT/standalone_planner/src/arrival_checker_core.cpp
 
 CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.i: cmake_force
@@ -125,21 +111,44 @@ CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sujin/Documents/01_GIT/standalone_planner/src/arrival_checker_core.cpp -o CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.s
 
+CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o: CMakeFiles/mission_planner.dir/flags.make
+CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o: ../src/mission_planner_core.cpp
+CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o: CMakeFiles/mission_planner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o -MF CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o.d -o CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o -c /home/sujin/Documents/01_GIT/standalone_planner/src/mission_planner_core.cpp
+
+CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sujin/Documents/01_GIT/standalone_planner/src/mission_planner_core.cpp > CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.i
+
+CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sujin/Documents/01_GIT/standalone_planner/src/mission_planner_core.cpp -o CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.s
+
 # Object files for target mission_planner
 mission_planner_OBJECTS = \
 "CMakeFiles/mission_planner.dir/src/main.cpp.o" \
-"CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o" \
 "CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o" \
-"CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o"
+"CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o" \
+"CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o"
 
 # External object files for target mission_planner
 mission_planner_EXTERNAL_OBJECTS =
 
 mission_planner: CMakeFiles/mission_planner.dir/src/main.cpp.o
-mission_planner: CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o
 mission_planner: CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o
 mission_planner: CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o
+mission_planner: CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o
 mission_planner: CMakeFiles/mission_planner.dir/build.make
+mission_planner: external/Rosless-Lanelet2/lanelet2_projection/liblanelet2_projection.so
+mission_planner: external/Rosless-Lanelet2/lanelet2_routing/liblanelet2_routing.so
+mission_planner: external/Rosless-Lanelet2/lanelet2_traffic_rules/liblanelet2_traffic_rules.so
+mission_planner: external/Rosless-Lanelet2/lanelet2_io/liblanelet2_io.so
+mission_planner: /usr/lib/x86_64-linux-gnu/libpugixml.so
+mission_planner: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
+mission_planner: /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.74.0
+mission_planner: /usr/lib/x86_64-linux-gnu/libGeographic.so
+mission_planner: external/Rosless-Lanelet2/lanelet2_core/liblanelet2_core.so
 mission_planner: CMakeFiles/mission_planner.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable mission_planner"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mission_planner.dir/link.txt --verbose=$(VERBOSE)

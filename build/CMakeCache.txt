@@ -14,6 +14,18 @@
 # EXTERNAL cache entries
 ########################
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0
+
+Boost_FILESYSTEM_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0
+
+Boost_SERIALIZATION_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.74.0
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -53,6 +65,32 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
+//C compiler
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-11
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-11
+
+//Flags used by the C compiler during all build types.
+CMAKE_C_FLAGS:STRING=
+
+//Flags used by the C compiler during DEBUG builds.
+CMAKE_C_FLAGS_DEBUG:STRING=-g
+
+//Flags used by the C compiler during MINSIZEREL builds.
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+//Flags used by the C compiler during RELEASE builds.
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+//Flags used by the C compiler during RELWITHDEBINFO builds.
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
@@ -74,8 +112,56 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
+//User executables (bin)
+CMAKE_INSTALL_BINDIR:PATH=bin
+
+//Read-only architecture-independent data (DATAROOTDIR)
+CMAKE_INSTALL_DATADIR:PATH=
+
+//Read-only architecture-independent data root (share)
+CMAKE_INSTALL_DATAROOTDIR:PATH=share
+
+//Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
+CMAKE_INSTALL_DOCDIR:PATH=
+
+//C header files (include)
+CMAKE_INSTALL_INCLUDEDIR:PATH=include
+
+//Info documentation (DATAROOTDIR/info)
+CMAKE_INSTALL_INFODIR:PATH=
+
+//Object code libraries (lib)
+CMAKE_INSTALL_LIBDIR:PATH=lib
+
+//Program executables (libexec)
+CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
+
+//Locale-dependent data (DATAROOTDIR/locale)
+CMAKE_INSTALL_LOCALEDIR:PATH=
+
+//Modifiable single-machine data (var)
+CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
+
+//Man documentation (DATAROOTDIR/man)
+CMAKE_INSTALL_MANDIR:PATH=
+
+//C header files for non-gcc (/usr/include)
+CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
+
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
+
+//Run-time variable data (LOCALSTATEDIR/run)
+CMAKE_INSTALL_RUNSTATEDIR:PATH=
+
+//System admin executables (sbin)
+CMAKE_INSTALL_SBINDIR:PATH=sbin
+
+//Modifiable architecture-independent data (com)
+CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
+
+//Read-only single-machine data (etc)
+CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -119,7 +205,22 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=standalone_mission_planner
+CMAKE_PROJECT_NAME:STATIC=standalone_planner
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=1.1.1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -186,23 +287,121 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //The directory containing a CMake configuration file for Eigen3.
 Eigen3_DIR:PATH=/usr/share/eigen3/cmake
 
-//Value Computed by CMake
-standalone_mission_planner_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build
+//Path to a library.
+GeographicLib_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libGeographic.so
+
+//Path to a file.
+PugiXml_INCLUDE_DIRS:PATH=/usr/include
+
+//Path to a library.
+PugiXml_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libpugixml.so
+
+//The directory containing a CMake configuration file for boost_filesystem.
+boost_filesystem_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.74.0
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0
+
+//The directory containing a CMake configuration file for boost_program_options.
+boost_program_options_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_program_options-1.74.0
+
+//The directory containing a CMake configuration file for boost_serialization.
+boost_serialization_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_serialization-1.74.0
 
 //Value Computed by CMake
-standalone_mission_planner_IS_TOP_LEVEL:STATIC=ON
+lanelet2_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build/external/Rosless-Lanelet2
 
 //Value Computed by CMake
-standalone_mission_planner_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner
+lanelet2_IS_TOP_LEVEL:STATIC=OFF
 
-//The directory containing a CMake configuration file for yaml-cpp.
-yaml-cpp_DIR:PATH=yaml-cpp_DIR-NOTFOUND
+//Value Computed by CMake
+lanelet2_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2
+
+//Dependencies for the target
+lanelet2_io_LIB_DEPENDS:STATIC=general;lanelet2_core;general;Boost::filesystem;general;Boost::serialization;
+
+//Dependencies for the target
+lanelet2_projection_LIB_DEPENDS:STATIC=general;lanelet2_core;general;lanelet2_io;
+
+//Dependencies for the target
+lanelet2_routing_LIB_DEPENDS:STATIC=general;lanelet2_core;general;lanelet2_traffic_rules;
+
+//Dependencies for the target
+lanelet2_traffic_rules_LIB_DEPENDS:STATIC=general;lanelet2_core;
+
+//Dependencies for the target
+lanelet2_validation_LIB_DEPENDS:STATIC=general;Boost::program_options;general;lanelet2_core;general;lanelet2_io;general;lanelet2_routing;general;lanelet2_projection;general;lanelet2_traffic_rules;
+
+//Value Computed by CMake
+liblanelet2_core_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build/external/Rosless-Lanelet2/lanelet2_core
+
+//Value Computed by CMake
+liblanelet2_core_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+liblanelet2_core_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core
+
+//Value Computed by CMake
+liblanelet2_io_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build/external/Rosless-Lanelet2/lanelet2_io
+
+//Value Computed by CMake
+liblanelet2_io_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+liblanelet2_io_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io
+
+//Value Computed by CMake
+liblanelet2_projection_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build/external/Rosless-Lanelet2/lanelet2_projection
+
+//Value Computed by CMake
+liblanelet2_projection_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+liblanelet2_projection_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_projection
+
+//Value Computed by CMake
+liblanelet2_routing_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build/external/Rosless-Lanelet2/lanelet2_routing
+
+//Value Computed by CMake
+liblanelet2_routing_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+liblanelet2_routing_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing
+
+//Value Computed by CMake
+liblanelet2_traffic_rules_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build/external/Rosless-Lanelet2/lanelet2_traffic_rules
+
+//Value Computed by CMake
+liblanelet2_traffic_rules_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+liblanelet2_traffic_rules_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_traffic_rules
+
+//Value Computed by CMake
+liblanelet2_validation_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build/external/Rosless-Lanelet2/lanelet2_validation
+
+//Value Computed by CMake
+liblanelet2_validation_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+liblanelet2_validation_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_validation
+
+//Value Computed by CMake
+standalone_planner_BINARY_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner/build
+
+//Value Computed by CMake
+standalone_planner_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+standalone_planner_SOURCE_DIR:STATIC=/home/sujin/Documents/01_GIT/standalone_planner
 
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -239,6 +438,22 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_AR
+CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
+CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS
+CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
+CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
+CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
+CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
+CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Executable file format
@@ -268,8 +483,40 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/sujin/Documents/01_GIT/standalone_planner
+//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
+CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
+CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
+CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
+CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
+CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
+CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
+CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
+CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
+CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
+CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
+CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
+CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_RUNSTATEDIR
+CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
+CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
+CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
+CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -287,7 +534,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -330,4 +577,22 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake][cfound components: serialization filesystem program_options ][v1.74.0()]
+//Details about finding GeographicLib
+FIND_PACKAGE_MESSAGE_DETAILS_GeographicLib:INTERNAL=[/usr/lib/x86_64-linux-gnu][/usr/lib/x86_64-linux-gnu/libGeographic.so][/usr/include][v()]
+//Details about finding PugiXml
+FIND_PACKAGE_MESSAGE_DETAILS_PugiXml:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpugixml.so][/usr/include][v()]
+//ADVANCED property for variable: GeographicLib_LIBRARIES
+GeographicLib_LIBRARIES-ADVANCED:INTERNAL=1
+//CMAKE_INSTALL_PREFIX during last run
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//ADVANCED property for variable: boost_filesystem_DIR
+boost_filesystem_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_program_options_DIR
+boost_program_options_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_serialization_DIR
+boost_serialization_DIR-ADVANCED:INTERNAL=1
 

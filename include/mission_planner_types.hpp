@@ -46,7 +46,7 @@ struct Pose
 // UUID
 using UUID = std::array<std::uint8_t, 16>;
 
-// LaneletPrimitive: "이 lanelet 하나"를 나타내는 최소 단위
+// lane 하나의 고유 ID, type(lane) 만 담는 구조
 struct LaneletPrimitive
 {
   std::int64_t id{};              // lanelet::Id
@@ -56,8 +56,8 @@ struct LaneletPrimitive
 // LaneletSegment: "차선 변경 가능한 구간 하나" = 여러 개의 lanelet 묶음
 struct LaneletSegment
 {
-  LaneletPrimitive preferred_primitive;          // 실제 주행 lane
-  std::vector<LaneletPrimitive> primitives;      // 이 구간에 포함된 모든 lanelet
+  LaneletPrimitive preferred_primitive;          // 실제 주행 lane 예) referred = lane 10
+  std::vector<LaneletPrimitive> primitives;      // 예) primitives = {10,11} (여차하면 11로 lane change 가능)
 };
 
 // 경로 전체

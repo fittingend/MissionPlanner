@@ -46,13 +46,19 @@ int main(int argc, char ** argv)
 
   // 6) start / goal, header, uuid 준비
   Pose start{};
-  start.position.x = 3811.65;   // 3628 ~ 3920 사이
-  start.position.y = 73540.8;  // 73453 ~ 73882 사이
-
+  start.position.x = 3708.456298828125;   // 3628 ~ 3920 사이
+  start.position.y = 73666.421875;  // 73453 ~ 73882 사이
+  start.orientation.x = 0;
+  start.orientation.y = 0;
+  start.orientation.z = 0.24;
+  start.orientation.w = 0.97;
   Pose goal{};
-  goal.position.x = 3900.0;    // x 범위 상단쪽
-  goal.position.y = 73800.0;   // y 범위 상단쪽
-
+  goal.position.x = 3760.0371;    // x 범위 상단쪽
+  goal.position.y = 73693.2578;   // y 범위 상단쪽
+  start.orientation.x = 0;
+  start.orientation.y = 0;
+  start.orientation.z = 0.2469;
+  start.orientation.w = 0.96902;
   Header h;
   h.frame_id = "map";
 

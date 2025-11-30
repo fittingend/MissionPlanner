@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles /home/sujin/Documents/01_GIT/standalone_planner/build//CMakeFiles/progress.marks
@@ -128,6 +173,97 @@ mission_planner: cmake_check_build_system
 mission_planner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/build
 .PHONY : mission_planner/fast
+
+#=============================================================================
+# Target rules for targets named lanelet2_core
+
+# Build rule for target.
+lanelet2_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lanelet2_core
+.PHONY : lanelet2_core
+
+# fast build rule for target.
+lanelet2_core/fast:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/build.make external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/build
+.PHONY : lanelet2_core/fast
+
+#=============================================================================
+# Target rules for targets named lanelet2_io
+
+# Build rule for target.
+lanelet2_io: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lanelet2_io
+.PHONY : lanelet2_io
+
+# fast build rule for target.
+lanelet2_io/fast:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/build.make external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/build
+.PHONY : lanelet2_io/fast
+
+#=============================================================================
+# Target rules for targets named lanelet2_projection
+
+# Build rule for target.
+lanelet2_projection: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lanelet2_projection
+.PHONY : lanelet2_projection
+
+# fast build rule for target.
+lanelet2_projection/fast:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/build.make external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/build
+.PHONY : lanelet2_projection/fast
+
+#=============================================================================
+# Target rules for targets named lanelet2_traffic_rules
+
+# Build rule for target.
+lanelet2_traffic_rules: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lanelet2_traffic_rules
+.PHONY : lanelet2_traffic_rules
+
+# fast build rule for target.
+lanelet2_traffic_rules/fast:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/build.make external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/build
+.PHONY : lanelet2_traffic_rules/fast
+
+#=============================================================================
+# Target rules for targets named lanelet2_routing
+
+# Build rule for target.
+lanelet2_routing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lanelet2_routing
+.PHONY : lanelet2_routing
+
+# fast build rule for target.
+lanelet2_routing/fast:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/build.make external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/build
+.PHONY : lanelet2_routing/fast
+
+#=============================================================================
+# Target rules for targets named lanelet2_validation
+
+# Build rule for target.
+lanelet2_validation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lanelet2_validation
+.PHONY : lanelet2_validation
+
+# fast build rule for target.
+lanelet2_validation/fast:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/build
+.PHONY : lanelet2_validation/fast
+
+#=============================================================================
+# Target rules for targets named lanelet2_validator
+
+# Build rule for target.
+lanelet2_validator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lanelet2_validator
+.PHONY : lanelet2_validator
+
+# fast build rule for target.
+lanelet2_validator/fast:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/build
+.PHONY : lanelet2_validator/fast
 
 src/arrival_checker_core.o: src/arrival_checker_core.cpp.o
 .PHONY : src/arrival_checker_core.o
@@ -232,7 +368,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... lanelet2_core"
+	@echo "... lanelet2_io"
+	@echo "... lanelet2_projection"
+	@echo "... lanelet2_routing"
+	@echo "... lanelet2_traffic_rules"
+	@echo "... lanelet2_validation"
+	@echo "... lanelet2_validator"
 	@echo "... mission_planner"
 	@echo "... src/arrival_checker_core.o"
 	@echo "... src/arrival_checker_core.i"

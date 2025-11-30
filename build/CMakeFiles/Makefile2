@@ -64,29 +64,157 @@ CMAKE_BINARY_DIR = /home/sujin/Documents/01_GIT/standalone_planner/build
 
 # The main recursive "all" target.
 all: CMakeFiles/mission_planner.dir/all
+all: external/Rosless-Lanelet2/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: external/Rosless-Lanelet2/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/mission_planner.dir/clean
+clean: external/Rosless-Lanelet2/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external/Rosless-Lanelet2
+
+# Recursive "all" directory target.
+external/Rosless-Lanelet2/all: external/Rosless-Lanelet2/lanelet2_core/all
+external/Rosless-Lanelet2/all: external/Rosless-Lanelet2/lanelet2_io/all
+external/Rosless-Lanelet2/all: external/Rosless-Lanelet2/lanelet2_projection/all
+external/Rosless-Lanelet2/all: external/Rosless-Lanelet2/lanelet2_traffic_rules/all
+external/Rosless-Lanelet2/all: external/Rosless-Lanelet2/lanelet2_routing/all
+external/Rosless-Lanelet2/all: external/Rosless-Lanelet2/lanelet2_validation/all
+.PHONY : external/Rosless-Lanelet2/all
+
+# Recursive "preinstall" directory target.
+external/Rosless-Lanelet2/preinstall: external/Rosless-Lanelet2/lanelet2_core/preinstall
+external/Rosless-Lanelet2/preinstall: external/Rosless-Lanelet2/lanelet2_io/preinstall
+external/Rosless-Lanelet2/preinstall: external/Rosless-Lanelet2/lanelet2_projection/preinstall
+external/Rosless-Lanelet2/preinstall: external/Rosless-Lanelet2/lanelet2_traffic_rules/preinstall
+external/Rosless-Lanelet2/preinstall: external/Rosless-Lanelet2/lanelet2_routing/preinstall
+external/Rosless-Lanelet2/preinstall: external/Rosless-Lanelet2/lanelet2_validation/preinstall
+.PHONY : external/Rosless-Lanelet2/preinstall
+
+# Recursive "clean" directory target.
+external/Rosless-Lanelet2/clean: external/Rosless-Lanelet2/lanelet2_core/clean
+external/Rosless-Lanelet2/clean: external/Rosless-Lanelet2/lanelet2_io/clean
+external/Rosless-Lanelet2/clean: external/Rosless-Lanelet2/lanelet2_projection/clean
+external/Rosless-Lanelet2/clean: external/Rosless-Lanelet2/lanelet2_traffic_rules/clean
+external/Rosless-Lanelet2/clean: external/Rosless-Lanelet2/lanelet2_routing/clean
+external/Rosless-Lanelet2/clean: external/Rosless-Lanelet2/lanelet2_validation/clean
+.PHONY : external/Rosless-Lanelet2/clean
+
+#=============================================================================
+# Directory level rules for directory external/Rosless-Lanelet2/lanelet2_core
+
+# Recursive "all" directory target.
+external/Rosless-Lanelet2/lanelet2_core/all: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+.PHONY : external/Rosless-Lanelet2/lanelet2_core/all
+
+# Recursive "preinstall" directory target.
+external/Rosless-Lanelet2/lanelet2_core/preinstall:
+.PHONY : external/Rosless-Lanelet2/lanelet2_core/preinstall
+
+# Recursive "clean" directory target.
+external/Rosless-Lanelet2/lanelet2_core/clean: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_core/clean
+
+#=============================================================================
+# Directory level rules for directory external/Rosless-Lanelet2/lanelet2_io
+
+# Recursive "all" directory target.
+external/Rosless-Lanelet2/lanelet2_io/all: external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/all
+.PHONY : external/Rosless-Lanelet2/lanelet2_io/all
+
+# Recursive "preinstall" directory target.
+external/Rosless-Lanelet2/lanelet2_io/preinstall:
+.PHONY : external/Rosless-Lanelet2/lanelet2_io/preinstall
+
+# Recursive "clean" directory target.
+external/Rosless-Lanelet2/lanelet2_io/clean: external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_io/clean
+
+#=============================================================================
+# Directory level rules for directory external/Rosless-Lanelet2/lanelet2_projection
+
+# Recursive "all" directory target.
+external/Rosless-Lanelet2/lanelet2_projection/all: external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/all
+.PHONY : external/Rosless-Lanelet2/lanelet2_projection/all
+
+# Recursive "preinstall" directory target.
+external/Rosless-Lanelet2/lanelet2_projection/preinstall:
+.PHONY : external/Rosless-Lanelet2/lanelet2_projection/preinstall
+
+# Recursive "clean" directory target.
+external/Rosless-Lanelet2/lanelet2_projection/clean: external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_projection/clean
+
+#=============================================================================
+# Directory level rules for directory external/Rosless-Lanelet2/lanelet2_routing
+
+# Recursive "all" directory target.
+external/Rosless-Lanelet2/lanelet2_routing/all: external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/all
+.PHONY : external/Rosless-Lanelet2/lanelet2_routing/all
+
+# Recursive "preinstall" directory target.
+external/Rosless-Lanelet2/lanelet2_routing/preinstall:
+.PHONY : external/Rosless-Lanelet2/lanelet2_routing/preinstall
+
+# Recursive "clean" directory target.
+external/Rosless-Lanelet2/lanelet2_routing/clean: external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_routing/clean
+
+#=============================================================================
+# Directory level rules for directory external/Rosless-Lanelet2/lanelet2_traffic_rules
+
+# Recursive "all" directory target.
+external/Rosless-Lanelet2/lanelet2_traffic_rules/all: external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/all
+.PHONY : external/Rosless-Lanelet2/lanelet2_traffic_rules/all
+
+# Recursive "preinstall" directory target.
+external/Rosless-Lanelet2/lanelet2_traffic_rules/preinstall:
+.PHONY : external/Rosless-Lanelet2/lanelet2_traffic_rules/preinstall
+
+# Recursive "clean" directory target.
+external/Rosless-Lanelet2/lanelet2_traffic_rules/clean: external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_traffic_rules/clean
+
+#=============================================================================
+# Directory level rules for directory external/Rosless-Lanelet2/lanelet2_validation
+
+# Recursive "all" directory target.
+external/Rosless-Lanelet2/lanelet2_validation/all: external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/all: external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/all
+
+# Recursive "preinstall" directory target.
+external/Rosless-Lanelet2/lanelet2_validation/preinstall:
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/preinstall
+
+# Recursive "clean" directory target.
+external/Rosless-Lanelet2/lanelet2_validation/clean: external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/clean
+external/Rosless-Lanelet2/lanelet2_validation/clean: external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/mission_planner.dir
 
 # All Build rule for target.
-CMakeFiles/mission_planner.dir/all:
+CMakeFiles/mission_planner.dir/all: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+CMakeFiles/mission_planner.dir/all: external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/all
+CMakeFiles/mission_planner.dir/all: external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/all
+CMakeFiles/mission_planner.dir/all: external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/all
+CMakeFiles/mission_planner.dir/all: external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target mission_planner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=44,45,46,47,48 "Built target mission_planner"
 .PHONY : CMakeFiles/mission_planner.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mission_planner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mission_planner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
 .PHONY : CMakeFiles/mission_planner.dir/rule
@@ -99,6 +227,199 @@ mission_planner: CMakeFiles/mission_planner.dir/rule
 CMakeFiles/mission_planner.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/clean
 .PHONY : CMakeFiles/mission_planner.dir/clean
+
+#=============================================================================
+# Target rules for target external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir
+
+# All Build rule for target.
+external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/build.make external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/build.make external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target lanelet2_core"
+.PHONY : external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+
+# Build rule for subdir invocation for target.
+external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
+.PHONY : external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/rule
+
+# Convenience name for target.
+lanelet2_core: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/rule
+.PHONY : lanelet2_core
+
+# clean rule for target.
+external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/build.make external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/clean
+
+#=============================================================================
+# Target rules for target external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir
+
+# All Build rule for target.
+external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/all: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/build.make external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/build.make external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=11,12,13,14,15,16,17 "Built target lanelet2_io"
+.PHONY : external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/all
+
+# Build rule for subdir invocation for target.
+external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 17
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
+.PHONY : external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/rule
+
+# Convenience name for target.
+lanelet2_io: external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/rule
+.PHONY : lanelet2_io
+
+# clean rule for target.
+external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/build.make external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/clean
+
+#=============================================================================
+# Target rules for target external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir
+
+# All Build rule for target.
+external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/all: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/all: external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/all
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/build.make external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/build.make external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=18,19,20 "Built target lanelet2_projection"
+.PHONY : external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/all
+
+# Build rule for subdir invocation for target.
+external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 20
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
+.PHONY : external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/rule
+
+# Convenience name for target.
+lanelet2_projection: external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/rule
+.PHONY : lanelet2_projection
+
+# clean rule for target.
+external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/build.make external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/clean
+
+#=============================================================================
+# Target rules for target external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir
+
+# All Build rule for target.
+external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/all: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/build.make external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/build.make external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=28,29,30,31 "Built target lanelet2_traffic_rules"
+.PHONY : external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/all
+
+# Build rule for subdir invocation for target.
+external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
+.PHONY : external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/rule
+
+# Convenience name for target.
+lanelet2_traffic_rules: external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/rule
+.PHONY : lanelet2_traffic_rules
+
+# clean rule for target.
+external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/build.make external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/clean
+
+#=============================================================================
+# Target rules for target external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir
+
+# All Build rule for target.
+external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/all: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/all: external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/all
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/build.make external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/build.make external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=21,22,23,24,25,26,27 "Built target lanelet2_routing"
+.PHONY : external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/all
+
+# Build rule for subdir invocation for target.
+external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 21
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
+.PHONY : external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/rule
+
+# Convenience name for target.
+lanelet2_routing: external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/rule
+.PHONY : lanelet2_routing
+
+# clean rule for target.
+external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/build.make external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/clean
+
+#=============================================================================
+# Target rules for target external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir
+
+# All Build rule for target.
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all: external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all: external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all: external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all: external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/all
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=32,33,34,35,36,37,38,39,40,41 "Built target lanelet2_validation"
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all
+
+# Build rule for subdir invocation for target.
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 41
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/rule
+
+# Convenience name for target.
+lanelet2_validation: external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/rule
+.PHONY : lanelet2_validation
+
+# clean rule for target.
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/clean
+
+#=============================================================================
+# Target rules for target external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir
+
+# All Build rule for target.
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all: external/Rosless-Lanelet2/lanelet2_core/CMakeFiles/lanelet2_core.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all: external/Rosless-Lanelet2/lanelet2_io/CMakeFiles/lanelet2_io.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all: external/Rosless-Lanelet2/lanelet2_projection/CMakeFiles/lanelet2_projection.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all: external/Rosless-Lanelet2/lanelet2_traffic_rules/CMakeFiles/lanelet2_traffic_rules.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all: external/Rosless-Lanelet2/lanelet2_routing/CMakeFiles/lanelet2_routing.dir/all
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all: external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validation.dir/all
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles --progress-num=42,43 "Built target lanelet2_validator"
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all
+
+# Build rule for subdir invocation for target.
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 43
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/rule
+
+# Convenience name for target.
+lanelet2_validator: external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/rule
+.PHONY : lanelet2_validator
+
+# clean rule for target.
+external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/clean
+.PHONY : external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
