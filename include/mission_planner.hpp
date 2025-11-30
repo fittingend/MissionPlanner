@@ -48,7 +48,6 @@ private:
   std::string map_frame_;
   std::shared_ptr<DefaultPlanner> planner_;
   TransformPoseFn transform_pose_;
-  RouteHandler route_handler_;
 };
 
 }  // namespace autoware::mission_planner_universe

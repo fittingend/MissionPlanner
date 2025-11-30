@@ -81,7 +81,7 @@ standalone_planner/
 ## 🔧 주요 모듈 설명
 
 
-![Standalone Planner flow diagram](flow.png)
+![Standalone Planner flow diagram](etc/flow.png)
 ### 1. route_handler.hpp / route_handler.cpp
 
 : Lanelet2 기반 경로 생성기 (Autoware RouteHandler기반)
