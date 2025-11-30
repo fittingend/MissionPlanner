@@ -1,6 +1,7 @@
 #pragma once
 
 #include "mission_planner_types.hpp"
+#include "route_handler_core.hpp"
 
 #include <functional>
 #include <memory>
@@ -47,6 +48,7 @@ private:
   std::string map_frame_;
   std::shared_ptr<DefaultPlannerCore> planner_;
   TransformPoseFn transform_pose_;
+  RouteHandlerCore route_handler_;
 };
 
 }  // namespace autoware::mission_planner_universe

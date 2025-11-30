@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mission_planner.dir/src/main.cpp.o.d"
   "CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o"
   "CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o.d"
+  "CMakeFiles/mission_planner.dir/src/route_handler_core.cpp.o"
+  "CMakeFiles/mission_planner.dir/src/route_handler_core.cpp.o.d"
   "mission_planner"
   "mission_planner.pdb"
 )

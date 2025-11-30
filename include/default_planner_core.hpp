@@ -1,21 +1,14 @@
 #pragma once
 
 #include "mission_planner_types.hpp"
+#include "route_handler_core.hpp"
+#include <lanelet2_core/LaneletMap.h>
+#include <lanelet2_traffic_rules/TrafficRules.h>
+#include <lanelet2_routing/RoutingGraph.h>
+#include <lanelet2_projection/UTM.h>
 
 #include <memory>
 #include <string>
-
-// Forward declare lanelet2 types only in header
-namespace lanelet
-{
-class LaneletMap;
-class Origin;
-
-namespace routing
-{
-class RoutingGraph;
-}  // namespace routing
-}  // namespace lanelet
 
 namespace autoware::mission_planner_universe
 {
@@ -49,16 +42,20 @@ public:
     const std::string & osm_file,
     const lanelet::Origin & origin);
 
-  // 최종 출력은 LaneletRoute
+  // Output route (Autoware-like LaneletRoute)
   LaneletRoute plan(const RoutePoints & points);
 
 private:
   DefaultPlannerParam param_;
   SimpleVehicleInfo vehicle_info_;
 
-  std::shared_ptr<lanelet::LaneletMap> map_;
-  std::shared_ptr<lanelet::routing::RoutingGraph> routing_graph_;
+  lanelet::LaneletMapPtr map_;
+  lanelet::traffic_rules::TrafficRulesPtr traffic_rules_;
+  lanelet::routing::RoutingGraphPtr routing_graph_;
+
   bool is_graph_ready_{false};
+
+  RouteHandlerCore route_handler_;
 };
 
 }  // namespace autoware::mission_planner_universe

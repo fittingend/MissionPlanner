@@ -65,7 +65,6 @@ int main(int argc, char ** argv)
   UUID uuid{};
   uuid[0] = 1; // 간단히 1로 설정 (실제 사용 시에는 random UUID 추천)
 
-
   // 7) (옵션) 중간 경유지 설정 – 지금은 비워두고 start→goal 바로 연결
   std::vector<Pose> waypoints;
 

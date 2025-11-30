@@ -17,6 +17,7 @@ add_executable(mission_planner
     src/default_planner_core.cpp
     src/arrival_checker_core.cpp
     src/mission_planner_core.cpp
+    src/route_handler_core.cpp
 )
 
 target_include_directories(mission_planner PRIVATE

@@ -361,6 +361,30 @@ src/mission_planner_core.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.s
 .PHONY : src/mission_planner_core.cpp.s
 
+src/route_handler_core.o: src/route_handler_core.cpp.o
+.PHONY : src/route_handler_core.o
+
+# target to build an object file
+src/route_handler_core.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler_core.cpp.o
+.PHONY : src/route_handler_core.cpp.o
+
+src/route_handler_core.i: src/route_handler_core.cpp.i
+.PHONY : src/route_handler_core.i
+
+# target to preprocess a source file
+src/route_handler_core.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler_core.cpp.i
+.PHONY : src/route_handler_core.cpp.i
+
+src/route_handler_core.s: src/route_handler_core.cpp.s
+.PHONY : src/route_handler_core.s
+
+# target to generate assembly for a file
+src/route_handler_core.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler_core.cpp.s
+.PHONY : src/route_handler_core.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -393,6 +417,9 @@ help:
 	@echo "... src/mission_planner_core.o"
 	@echo "... src/mission_planner_core.i"
 	@echo "... src/mission_planner_core.s"
+	@echo "... src/route_handler_core.o"
+	@echo "... src/route_handler_core.i"
+	@echo "... src/route_handler_core.s"
 .PHONY : help
 
 

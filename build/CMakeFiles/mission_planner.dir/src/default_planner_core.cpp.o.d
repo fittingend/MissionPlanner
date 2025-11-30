@@ -132,31 +132,15 @@ CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o: \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/memory \
- /usr/include/c++/11/bits/stl_tempbuf.h \
- /usr/include/c++/11/bits/stl_raw_storage_iter.h \
- /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
- /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/shared_ptr.h \
- /usr/include/c++/11/bits/shared_ptr_base.h /usr/include/c++/11/typeinfo \
- /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/bits/refwrap.h \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/ext/concurrence.h /usr/include/c++/11/exception \
- /usr/include/c++/11/bits/exception_ptr.h \
- /usr/include/c++/11/bits/cxxabi_init_exception.h \
- /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/shared_ptr_atomic.h \
- /usr/include/c++/11/bits/atomic_base.h \
- /usr/include/c++/11/bits/atomic_lockfree_defines.h \
- /usr/include/c++/11/backward/auto_ptr.h \
- /usr/include/c++/11/pstl/glue_memory_defs.h \
- /usr/include/c++/11/pstl/execution_defs.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Io.h \
+ /usr/include/c++/11/bits/vector.tcc \
+ /home/sujin/Documents/01_GIT/standalone_planner/include/route_handler_core.hpp \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/LaneletMap.h \
- /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/unordered_map \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
@@ -436,10 +420,12 @@ CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o: \
  /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
- /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /usr/include/boost/mpl/and.hpp \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \
+ /usr/include/c++/11/pstl/execution_defs.h /usr/include/boost/mpl/and.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
  /usr/include/boost/mpl/or.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
@@ -527,6 +513,22 @@ CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o: \
  /usr/include/boost/units/physical_dimensions/plane_angle.hpp \
  /usr/include/boost/units/base_units/angle/steradian.hpp \
  /usr/include/boost/units/physical_dimensions/solid_angle.hpp \
+ /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/unique_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/ext/concurrence.h /usr/include/c++/11/exception \
+ /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/bits/cxxabi_init_exception.h \
+ /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h \
+ /usr/include/c++/11/pstl/glue_memory_defs.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Area.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/CompoundPolygon.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/CompoundLineString.h \
@@ -956,21 +958,15 @@ CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o: \
  /usr/include/boost/mpl/equal.hpp \
  /usr/include/boost/variant/visitor_ptr.hpp \
  /usr/include/boost/variant/bad_visit.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Configuration.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Projection.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/GPSPoint.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_projection/include/lanelet2_projection/UTM.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Exceptions.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include/lanelet2_traffic_rules/TrafficRulesFactory.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include/lanelet2_traffic_rules/TrafficRules.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/RoutingGraph.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/LaneletOrArea.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/Forward.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/LaneletPath.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/LaneletSequence.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/RoutingCost.h \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include/lanelet2_traffic_rules/TrafficRules.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/Types.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/Route.h \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include/lanelet2_traffic_rules/TrafficRulesFactory.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/Lanelet.h \
  /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/Lanelet.h \
  /usr/include/boost/geometry/algorithms/relate.hpp \
@@ -2053,4 +2049,12 @@ CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o: \
  /usr/include/boost/geometry/algorithms/detail/intersection/areal_areal.hpp \
  /usr/include/boost/geometry/algorithms/detail/intersection/box_box.hpp \
  /usr/include/boost/geometry/algorithms/detail/intersection/multi.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/Polygon.h
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/Polygon.h \
+ /usr/include/c++/11/optional \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_projection/include/lanelet2_projection/UTM.h \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Exceptions.h \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Projection.h \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/GPSPoint.h \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Io.h \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Configuration.h \
+ /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/Route.h
