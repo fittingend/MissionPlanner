@@ -16,14 +16,14 @@
 namespace autoware::mission_planner_universe
 {
 
-// 간단한 파라미터 구조체 (필요하면 네 DefaultPlannerParam과 합쳐도 됨)
-struct RouteHandlerParam
+struct DefaultPlannerParam
 {
   double goal_angle_threshold_rad{M_PI / 6.0};  // goal yaw vs lanelet 방향 허용 각도 (30도 정도)
   double search_radius{30.0};                   // start/goal 근처 lanelet 탐색 반경
 };
+using RouteHandlerParam = DefaultPlannerParam;
 
-class RouteHandlerCore
+class RouteHandler
 {
 public:
   using LaneletMapPtr      = std::shared_ptr<lanelet::LaneletMap>;
@@ -32,9 +32,9 @@ public:
   using ConstLanelet       = lanelet::ConstLanelet;
   using ConstLanelets      = std::vector<ConstLanelet>;
 
-  RouteHandlerCore() = default;
+  RouteHandler() = default;
 
-  RouteHandlerCore(
+  RouteHandler(
     const LaneletMapPtr & map,
     const RoutingGraphPtr & graph,
     const TrafficRulesPtr & rules,
@@ -45,11 +45,13 @@ public:
   void setMapAndGraph(
     const LaneletMapPtr & map,
     const RoutingGraphPtr & graph,
-    const TrafficRulesPtr & rules)
+    const TrafficRulesPtr & rules,
+    const DefaultPlannerParam & param = DefaultPlannerParam())
   {
     map_   = map;
     graph_ = graph;
     rules_ = rules;
+    param_ = param;
   }
 
   bool isReady() const

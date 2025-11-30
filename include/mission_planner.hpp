@@ -1,7 +1,7 @@
 #pragma once
 
 #include "mission_planner_types.hpp"
-#include "route_handler_core.hpp"
+#include "route_handler.hpp"
 
 #include <functional>
 #include <memory>
@@ -11,16 +11,16 @@
 namespace autoware::mission_planner_universe
 {
 
-class DefaultPlannerCore;  // forward declaration
+class DefaultPlanner;  // forward declaration
 
 using TransformPoseFn = std::function<Pose(const Pose &, const Header &)>;
 
-class MissionPlannerCore
+class MissionPlanner
 {
 public:
-  MissionPlannerCore(
+  MissionPlanner(
     const std::string & frame_id,
-    std::shared_ptr<DefaultPlannerCore> planner,
+    std::shared_ptr<DefaultPlanner> planner,
     TransformPoseFn transform_pose_fn);
 
   LaneletRoute makeRouteFromSegments(
@@ -46,9 +46,9 @@ public:
 
 private:
   std::string map_frame_;
-  std::shared_ptr<DefaultPlannerCore> planner_;
+  std::shared_ptr<DefaultPlanner> planner_;
   TransformPoseFn transform_pose_;
-  RouteHandlerCore route_handler_;
+  RouteHandler route_handler_;
 };
 
 }  // namespace autoware::mission_planner_universe

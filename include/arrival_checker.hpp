@@ -23,10 +23,10 @@ using StopCheckerFn = std::function<bool(double duration_sec)>;
 // - angle_rad : 허용 yaw 오차 (rad)
 // - distance  : 허용 위치 오차 (m)
 // - duration_sec : 정지 시간 (초)
-class ArrivalCheckerCore
+class ArrivalChecker
 {
 public:
-  ArrivalCheckerCore(
+  ArrivalChecker(
     double angle_rad,
     double distance,
     double duration_sec,

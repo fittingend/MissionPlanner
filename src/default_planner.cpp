@@ -1,5 +1,4 @@
-#include "default_planner_core.hpp"
-
+#include "default_planner.hpp"
 #include <lanelet2_io/Io.h>
 #include <lanelet2_projection/UTM.h>
 #include <lanelet2_traffic_rules/TrafficRulesFactory.h>
@@ -17,7 +16,7 @@
 namespace autoware::mission_planner_universe
 {
 
-DefaultPlannerCore::DefaultPlannerCore(
+DefaultPlanner::DefaultPlanner(
   const DefaultPlannerParam & param,
   const SimpleVehicleInfo & vehicle_info)
 : param_(param), vehicle_info_(vehicle_info)
@@ -25,7 +24,7 @@ DefaultPlannerCore::DefaultPlannerCore(
 }
 
 // OSM 파일 로드 + Lanelet2 RoutingGraph 생성
-void DefaultPlannerCore::loadOsmMap(
+void DefaultPlanner::loadOsmMap(
   const std::string & osm_file,
   const lanelet::Origin & origin)
 {
@@ -93,22 +92,22 @@ void DefaultPlannerCore::loadOsmMap(
   routing_graph_ = lanelet::routing::RoutingGraph::build(*map_, *traffic_rules_);
   is_graph_ready_ = (routing_graph_ != nullptr);
 
-  // 5) RouteHandlerCore에 map / rules / graph / param을 넘겨서 초기화
+  // 5) RouteHandler에 map / rules / graph / param을 넘겨서 초기화
   route_handler_.setMapAndGraph(
     map_,                  // lanelet::LaneletMapPtr
     routing_graph_,        // lanelet::routing::RoutingGraphPtr
-    traffic_rules_        // lanelet::traffic_rules::TrafficRulesPtr
-    //param_                 // DefaultPlannerParam (goal_angle_threshold_rad 등 포함)
+    traffic_rules_,       // lanelet::traffic_rules::TrafficRulesPtr
+    param_                 // DefaultPlannerParam (goal_angle_threshold_rad 등 포함)
   );
 }
 
 // Rosless-Lanelet2 사용 시에는 loadOsmMap()만 사용
-// void DefaultPlannerCore::setMap(const LaneletMapBin & msg)
+// void DefaultPlanner::setMap(const LaneletMapBin & msg)
 // {
 //   (void)msg;
 // }
 
-LaneletRoute DefaultPlannerCore::plan(const RoutePoints & points)
+LaneletRoute DefaultPlanner::plan(const RoutePoints & points)
 {
   LaneletRoute route_msg;
 
@@ -122,16 +121,16 @@ LaneletRoute DefaultPlannerCore::plan(const RoutePoints & points)
   route_msg.start_pose = points.front();
   route_msg.goal_pose  = points.back();
 
-  std::cout << "[RouteHandlerCore] start_pose=("
+  std::cout << "[RouteHandler] start_pose=("
           << route_msg.start_pose.position.x << ", "
           << route_msg.start_pose.position.y << ")\n";
-  std::cout << "[RouteHandlerCore] goal_pose=("
+  std::cout << "[RouteHandler] goal_pose=("
           << route_msg.goal_pose.position.x << ", "
           << route_msg.goal_pose.position.y << ")\n";
 
-  // 2) RouteHandlerCore에서 실제 lanelet route 계산
+  // 2) RouteHandler에서 실제 lanelet route 계산
   if (!route_handler_.planRoute(start_pose, goal_pose,route_msg)) {
-  std::cerr << "[DefaultPlannerCore] RouteHandlerCore::planRoute() failed\n";
+  std::cerr << "[DefaultPlanner] RouteHandler::planRoute() failed\n";
   return LaneletRoute{};
   }
   return route_msg;
@@ -209,12 +208,12 @@ LaneletRoute DefaultPlannerCore::plan(const RoutePoints & points)
     */
 
 
-// void DefaultPlannerCore::updateRoute(const LaneletRoute & route)
+// void DefaultPlanner::updateRoute(const LaneletRoute & route)
 // {
 //   (void)route;
 // }
 
-// void DefaultPlannerCore::clearRoute()
+// void DefaultPlanner::clearRoute()
 // {
 // }
 

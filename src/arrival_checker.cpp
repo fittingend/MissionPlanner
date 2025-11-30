@@ -1,11 +1,11 @@
-#include "arrival_checker_core.hpp"
+#include "arrival_checker.hpp"
 
 #include <cmath>
 
 namespace autoware::mission_planner_universe
 {
 
-ArrivalCheckerCore::ArrivalCheckerCore(
+ArrivalChecker::ArrivalChecker(
   double angle_rad,
   double distance,
   double duration_sec,
@@ -17,17 +17,17 @@ ArrivalCheckerCore::ArrivalCheckerCore(
 {
 }
 
-void ArrivalCheckerCore::clear_goal()
+void ArrivalChecker::clear_goal()
 {
   goal_.reset();
 }
 
-void ArrivalCheckerCore::set_goal(const Pose2D & goal)
+void ArrivalChecker::set_goal(const Pose2D & goal)
 {
   goal_ = goal;
 }
 
-double ArrivalCheckerCore::normalizeRadian(double rad)
+double ArrivalChecker::normalizeRadian(double rad)
 {
   const double two_pi = 2.0 * M_PI;
   while (rad > M_PI) {
@@ -39,7 +39,7 @@ double ArrivalCheckerCore::normalizeRadian(double rad)
   return rad;
 }
 
-bool ArrivalCheckerCore::is_arrived(const Pose2D & pose) const
+bool ArrivalChecker::is_arrived(const Pose2D & pose) const
 {
   if (!goal_) {
     return false;

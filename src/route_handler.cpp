@@ -1,4 +1,4 @@
-#include "route_handler_core.hpp"
+#include "route_handler.hpp"
 
 #include <lanelet2_core/primitives/Lanelet.h>
 #include <lanelet2_core/geometry/LineString.h>
@@ -10,13 +10,13 @@
 namespace autoware::mission_planner_universe
 {
 
-using ConstLanelet  = RouteHandlerCore::ConstLanelet;
-using ConstLanelets = RouteHandlerCore::ConstLanelets;
+using ConstLanelet  = RouteHandler::ConstLanelet;
+using ConstLanelets = RouteHandler::ConstLanelets;
 
 // ─────────────────────────────────────────────────────────────
 //  쿼터니언 → yaw
 // ─────────────────────────────────────────────────────────────
-double RouteHandlerCore::yawFromQuaternion(const Pose & pose)
+double RouteHandler::yawFromQuaternion(const Pose & pose)
 {
   const auto & q = pose.orientation;
   double siny_cosp = 2.0 * (q.w * q.z + q.x * q.y);
@@ -29,7 +29,7 @@ double RouteHandlerCore::yawFromQuaternion(const Pose & pose)
 //   - 여기서는 단순히 centerline 첫/마지막 점을 이용
 //   - 더 정밀하게 하려면 goal 근처 segment로 보정 가능
 // ─────────────────────────────────────────────────────────────
-double RouteHandlerCore::computeLaneletYaw(const ConstLanelet & ll)
+double RouteHandler::computeLaneletYaw(const ConstLanelet & ll)
 {
   const auto & cl = ll.centerline();
   if (cl.size() < 2) {
@@ -47,23 +47,13 @@ double RouteHandlerCore::computeLaneletYaw(const ConstLanelet & ll)
 //   - 단순 nearest(1) 대신, 일정 반경 안의 여러 lanelet을 보면서
 //     traffic_rules->canPass() 로 필터링
 // ─────────────────────────────────────────────────────────────
-std::optional<ConstLanelet> RouteHandlerCore::getClosestDrivableLanelet(
+std::optional<ConstLanelet> RouteHandler::getClosestDrivableLanelet(
   const lanelet::BasicPoint2d & pt) const
 {
   if (!map_ || !rules_) {
     return std::nullopt;
   }
   
-    // map에서 lanelet 101, 9285 가져오기 (있다고 가정)
-    auto ll101  = map_->laneletLayer.get(lanelet::Id(101));
-    auto ll9285 = map_->laneletLayer.get(lanelet::Id(9285));
-
-    double d101  = lanelet::geometry::distance2d(ll101,  pt);
-    double d9285 = lanelet::geometry::distance2d(ll9285, pt);
-
-    std::cout << "[Debug] distance(goal -> 101)  = " << d101  << "\n";
-    std::cout << "[Debug] distance(goal -> 9285) = " << d9285 << "\n";
-
   // 충분히 많은 후보를 본다 (예: 10개)
   auto candidates = map_->laneletLayer.nearest(pt, 10);
   double best_dist = std::numeric_limits<double>::max();
@@ -93,7 +83,7 @@ std::optional<ConstLanelet> RouteHandlerCore::getClosestDrivableLanelet(
 // ─────────────────────────────────────────────────────────────
 //  goal pose yaw vs lanelet 진행방향 체크
 // ─────────────────────────────────────────────────────────────
-bool RouteHandlerCore::isGoalAngleValid(
+bool RouteHandler::isGoalAngleValid(
   const Pose & goal_pose,
   const ConstLanelet & goal_ll) const
 {
@@ -110,7 +100,7 @@ bool RouteHandlerCore::isGoalAngleValid(
 // ─────────────────────────────────────────────────────────────
 //  메인: start/goal → LaneletRoute 생성
 // ─────────────────────────────────────────────────────────────
-bool RouteHandlerCore::planRoute(
+bool RouteHandler::planRoute(
    const Pose & start_pose,
    const Pose & goal_pose,
   LaneletRoute & out_route) const
@@ -118,7 +108,7 @@ bool RouteHandlerCore::planRoute(
   out_route = LaneletRoute{};  // 초기화
 
   if (!isReady()) {
-    std::cerr << "[RouteHandlerCore] not ready (map/graph/rules missing)\n";
+    std::cerr << "[RouteHandler] not ready (map/graph/rules missing)\n";
     return false;
   }
 
@@ -131,20 +121,20 @@ bool RouteHandlerCore::planRoute(
   auto goal_ll_opt  = getClosestDrivableLanelet(goal_pt);
 
   if (!start_ll_opt || !goal_ll_opt) {
-    std::cerr << "[RouteHandlerCore] failed to find drivable lanelet for start/goal\n";
+    std::cerr << "[RouteHandler] failed to find drivable lanelet for start/goal\n";
     return false;
   }
 
   auto start_ll = *start_ll_opt;
   auto goal_ll  = *goal_ll_opt;
 
-  std::cout << "[RouteHandlerCore] start_ll id=" << start_ll.id()
+  std::cout << "[RouteHandler] start_ll id=" << start_ll.id()
             << ", goal_ll id=" << goal_ll.id() << std::endl;
 
 
   // 3) goal pose 유효성 체크 (yaw vs lanelet 방향)
   if (!isGoalAngleValid(goal_pose, goal_ll)) {
-    std::cerr << "[RouteHandlerCore] goal yaw is not aligned with lanelet direction\n";
+    std::cerr << "[RouteHandler] goal yaw is not aligned with lanelet direction\n";
     //return false;
   }
 
@@ -154,13 +144,13 @@ bool RouteHandlerCore::planRoute(
   // 4) RoutingGraph를 이용한 route 계산
   auto route = graph_->getRoute(start_ll, goal_ll);
   if (!route) {
-    std::cerr << "[RouteHandlerCore] getRoute() failed (no path between lanelets)\n";
+    std::cerr << "[RouteHandler] getRoute() failed (no path between lanelets)\n";
     return false;
   }
 
   auto shortest_path = route->shortestPath();
   if (shortest_path.empty()) {
-    std::cerr << "[RouteHandlerCore] shortestPath() is empty\n";
+    std::cerr << "[RouteHandler] shortestPath() is empty\n";
     return false;
   }
 

@@ -14,10 +14,10 @@ add_subdirectory(external/Rosless-Lanelet2)
 # ----------------------------------------------------------------------
 add_executable(mission_planner
     src/main.cpp
-    src/default_planner_core.cpp
-    src/arrival_checker_core.cpp
-    src/mission_planner_core.cpp
-    src/route_handler_core.cpp
+    src/default_planner.cpp
+    src/arrival_checker.cpp
+    src/mission_planner.cpp
+    src/route_handler.cpp
 )
 
 target_include_directories(mission_planner PRIVATE

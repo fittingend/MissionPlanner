@@ -1,7 +1,7 @@
 #pragma once
 
 #include "mission_planner_types.hpp"
-#include "route_handler_core.hpp"
+#include "route_handler.hpp"
 #include <lanelet2_core/LaneletMap.h>
 #include <lanelet2_traffic_rules/TrafficRules.h>
 #include <lanelet2_routing/RoutingGraph.h>
@@ -13,13 +13,13 @@
 namespace autoware::mission_planner_universe
 {
 
-struct DefaultPlannerParam
-{
-  double goal_angle_threshold_deg{10.0};
-  bool check_footprint_inside_lanes{false};
-  bool consider_no_drivable_lanes{false};
-  bool enable_correct_goal_pose{false};
-};
+// struct DefaultPlannerParam
+// {
+//   double goal_angle_threshold_deg{10.0};
+//   bool check_footprint_inside_lanes{false};
+//   bool consider_no_drivable_lanes{false};
+//   bool enable_correct_goal_pose{false};
+// };
 
 struct SimpleVehicleInfo
 {
@@ -29,12 +29,12 @@ struct SimpleVehicleInfo
   double max_longitudinal_offset_m{10.0};
 };
 
-class DefaultPlannerCore
+class DefaultPlanner
 {
 public:
   using RoutePoints = std::vector<Pose>;
 
-  DefaultPlannerCore(
+  DefaultPlanner(
     const DefaultPlannerParam & param,
     const SimpleVehicleInfo & vehicle_info);
 
@@ -55,7 +55,7 @@ private:
 
   bool is_graph_ready_{false};
 
-  RouteHandlerCore route_handler_;
+  RouteHandler route_handler_;
 };
 
 }  // namespace autoware::mission_planner_universe
