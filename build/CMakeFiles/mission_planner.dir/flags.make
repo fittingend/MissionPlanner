@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SERIALIZATION_DYN_LINK
 
-CXX_INCLUDES = -I/home/sujin/Documents/01_GIT/standalone_planner/include -I/home/sujin/Documents/01_GIT/standalone_planner/external/lanelet2 -I/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include -I/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include -I/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_projection/include -I/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include -I/home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include -isystem /usr/include/eigen3
+CXX_INCLUDES = -I/home/sujin/Documents/01_GIT/MissionPlanner/include -I/home/sujin/Documents/01_GIT/MissionPlanner/external/lanelet2 -I/home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include -I/home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_io/include -I/home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_projection/include -I/home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_routing/include -I/home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include -isystem /usr/include/eigen3
 
 CXX_FLAGS = -std=gnu++17
 

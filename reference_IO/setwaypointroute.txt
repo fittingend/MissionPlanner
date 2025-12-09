@@ -1,0 +1,19 @@
+header:
+  stamp:
+    sec: 0
+    nanosec: 0
+  frame_id: 'map'
+goal_pose:
+  position:
+    x: 3760.0371
+    y: 73693.2578
+    z: 0.0
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.2469880473729873
+    w: 0.9690185263734017
+waypoints: []
+uuid:
+  uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+allow_modification: false

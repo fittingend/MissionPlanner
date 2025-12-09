@@ -1,8 +1,8 @@
 CMakeFiles/mission_planner.dir/src/main.cpp.o: \
- /home/sujin/Documents/01_GIT/standalone_planner/src/main.cpp \
+ /home/sujin/Documents/01_GIT/MissionPlanner/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/sujin/Documents/01_GIT/standalone_planner/include/mission_planner_core.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/include/mission_planner_types.hpp \
+ /home/sujin/Documents/01_GIT/MissionPlanner/include/default_planner.hpp \
+ /home/sujin/Documents/01_GIT/MissionPlanner/include/mission_planner_types.hpp \
  /usr/include/c++/11/array /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -133,8 +133,8 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/sujin/Documents/01_GIT/standalone_planner/include/route_handler_core.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/LaneletMap.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/include/route_handler.hpp \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/LaneletMap.h \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/hashtable.h \
@@ -145,7 +145,7 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/Forward.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/Forward.h \
  /usr/include/boost/units/physical_dimensions/acceleration.hpp \
  /usr/include/boost/units/derived_dimension.hpp \
  /usr/include/boost/units/dim.hpp /usr/include/boost/static_assert.hpp \
@@ -529,13 +529,13 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Area.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/CompoundPolygon.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/CompoundLineString.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Area.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/CompoundPolygon.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/CompoundLineString.h \
  /usr/include/boost/noncopyable.hpp \
  /usr/include/boost/core/noncopyable.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/LineString.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/BoundingBox.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/LineString.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/BoundingBox.h \
  /usr/include/eigen3/Eigen/Geometry /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
@@ -731,10 +731,10 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Point.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Point.h \
  /usr/include/eigen3/Eigen/Core \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Primitive.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/Attribute.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Primitive.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/Attribute.h \
  /usr/include/boost/variant/variant.hpp /usr/include/boost/type_index.hpp \
  /usr/include/boost/type_index/stl_type_index.hpp \
  /usr/include/boost/type_index/type_index_facade.hpp \
@@ -878,11 +878,11 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/boost/mpl/inserter.hpp \
  /usr/include/boost/mpl/front_inserter.hpp \
  /usr/include/boost/variant/detail/variant_io.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/HybridMap.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/HybridMap.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/Optional.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/Optional.h \
  /usr/include/boost/optional.hpp /usr/include/boost/optional/optional.hpp \
  /usr/include/boost/core/addressof.hpp \
  /usr/include/boost/core/explicit_operator_bool.hpp \
@@ -917,9 +917,9 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/boost/optional/detail/optional_reference_spec.hpp \
  /usr/include/boost/optional/detail/optional_relops.hpp \
  /usr/include/boost/optional/detail/optional_swap.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/Exceptions.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Traits.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/TransformIterator.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/Exceptions.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Traits.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/TransformIterator.h \
  /usr/include/boost/iterator/iterator_adaptor.hpp \
  /usr/include/boost/core/use_default.hpp \
  /usr/include/boost/iterator/iterator_categories.hpp \
@@ -934,18 +934,18 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/boost/type_traits/remove_pointer.hpp \
  /usr/include/boost/detail/select_type.hpp \
  /usr/include/boost/iterator/detail/enable_if.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/Utilities.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/Utilities.h \
  /usr/include/boost/variant/get.hpp \
  /usr/include/boost/utility/addressof.hpp \
  /usr/include/boost/variant/detail/element_index.hpp \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/ReverseAndForwardIterator.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/CompoundIterator.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/ReverseAndForwardIterator.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/utility/CompoundIterator.h \
  /usr/include/c++/11/iostream \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Polygon.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Lanelet.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/RegulatoryElement.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Polygon.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/Lanelet.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/RegulatoryElement.h \
  /usr/include/boost/variant.hpp \
  /usr/include/boost/variant/recursive_variant.hpp \
  /usr/include/boost/variant/detail/enable_recursive.hpp \
@@ -958,17 +958,17 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/boost/mpl/equal.hpp \
  /usr/include/boost/variant/visitor_ptr.hpp \
  /usr/include/boost/variant/bad_visit.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/RoutingGraph.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/LaneletOrArea.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/Forward.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/LaneletPath.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/LaneletSequence.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/RoutingCost.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include/lanelet2_traffic_rules/TrafficRules.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/Types.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include/lanelet2_traffic_rules/TrafficRulesFactory.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/Lanelet.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/Lanelet.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/RoutingGraph.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/LaneletOrArea.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/Forward.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/LaneletPath.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/LaneletSequence.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/RoutingCost.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include/lanelet2_traffic_rules/TrafficRules.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_routing/include/lanelet2_routing/Types.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_traffic_rules/include/lanelet2_traffic_rules/TrafficRulesFactory.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/Lanelet.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/Lanelet.h \
  /usr/include/boost/geometry/algorithms/relate.hpp \
  /usr/include/boost/geometry/algorithms/detail/relate/interface.hpp \
  /usr/include/boost/geometry/core/coordinate_dimension.hpp \
@@ -1720,9 +1720,9 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
  /usr/include/boost/geometry/index/detail/config_end.hpp \
  /usr/include/boost/geometry/algorithms/detail/relate/areal_areal.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/Polygon.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/Polygon.h \
  /usr/include/boost/geometry/geometries/register/ring.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/LineString.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/LineString.h \
  /usr/include/boost/geometry/algorithms/intersects.hpp \
  /usr/include/boost/geometry/algorithms/detail/intersects/implementation.hpp \
  /usr/include/boost/geometry/algorithms/detail/disjoint/implementation.hpp \
@@ -1746,9 +1746,9 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/boost/geometry/algorithms/detail/multi_sum.hpp \
  /usr/include/boost/geometry/geometries/register/linestring.hpp \
  /usr/include/boost/geometry/geometries/register/segment.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/BoundingBox.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/BoundingBox.h \
  /usr/include/boost/geometry/geometries/register/box.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/Point.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/Point.h \
  /usr/include/boost/geometry/algorithms/distance.hpp \
  /usr/include/boost/geometry/algorithms/detail/distance/implementation.hpp \
  /usr/include/boost/geometry/algorithms/detail/distance/point_to_geometry.hpp \
@@ -1973,8 +1973,8 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/boost/qvm/map_mat_vec.hpp \
  /usr/include/boost/geometry/strategies/transform/map_transformer.hpp \
  /usr/include/boost/geometry/strategies/transform/inverse_transformer.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/GeometryHelper.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/LineString.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/GeometryHelper.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/LineString.h \
  /usr/include/boost/geometry/algorithms/intersection.hpp \
  /usr/include/boost/geometry/algorithms/detail/intersection/interface.hpp \
  /usr/include/boost/geometry/algorithms/detail/overlay/intersection_insert.hpp \
@@ -2049,14 +2049,14 @@ CMakeFiles/mission_planner.dir/src/main.cpp.o: \
  /usr/include/boost/geometry/algorithms/detail/intersection/areal_areal.hpp \
  /usr/include/boost/geometry/algorithms/detail/intersection/box_box.hpp \
  /usr/include/boost/geometry/algorithms/detail/intersection/multi.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/Polygon.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/geometry/impl/Polygon.h \
  /usr/include/c++/11/optional \
- /home/sujin/Documents/01_GIT/standalone_planner/include/default_planner_core.hpp \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_projection/include/lanelet2_projection/UTM.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Exceptions.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Projection.h \
- /home/sujin/Documents/01_GIT/standalone_planner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/GPSPoint.h \
- /home/sujin/Documents/01_GIT/standalone_planner/include/arrival_checker_core.hpp \
- /usr/include/c++/11/random /usr/include/c++/11/bits/random.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
- /usr/include/c++/11/bits/random.tcc
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_projection/include/lanelet2_projection/UTM.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Exceptions.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_io/include/lanelet2_io/Projection.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/external/Rosless-Lanelet2/lanelet2_core/include/lanelet2_core/primitives/GPSPoint.h \
+ /home/sujin/Documents/01_GIT/MissionPlanner/include/mission_planner.hpp \
+ /usr/include/c++/11/fstream \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc

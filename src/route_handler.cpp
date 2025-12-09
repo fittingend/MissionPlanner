@@ -6,6 +6,7 @@
 #include <lanelet2_routing/Route.h>
 
 #include <iostream>
+#include <limits>
 
 namespace autoware::mission_planner_universe
 {
@@ -162,14 +163,33 @@ bool RouteHandler::planRoute(
   for (const auto & ll : shortest_path) {
     LaneletSegment seg{};
 
-    LaneletPrimitive prim;
-    prim.id             = ll.id();        // lanelet::Id
-    prim.primitive_type = "lane";        // Autoware도 기본은 "lane" 사용
+    LaneletPrimitive pref_prim{};
+    pref_prim.id             = ll.id();
+    pref_prim.primitive_type = "";
 
-    seg.preferred_primitive = prim;
-    seg.primitives.push_back(prim);
+    LaneletPrimitive lane_prim = pref_prim;
+    lane_prim.primitive_type = "lane";
+
+    seg.preferred_primitive = pref_prim;
+    seg.primitives.push_back(lane_prim);
 
     out_route.segments.push_back(seg);
+  }
+
+  if (!goal_ll.centerline().empty()) {
+    double best_dist = std::numeric_limits<double>::max();
+    lanelet::BasicPoint3d best_point{};
+    for (const auto & pt : goal_ll.centerline()) {
+      const auto current = pt.basicPoint();
+      const double dx = current.x() - goal_pose.position.x;
+      const double dy = current.y() - goal_pose.position.y;
+      const double dist = std::hypot(dx, dy);
+      if (dist < best_dist) {
+        best_dist = dist;
+        best_point = current;
+      }
+    }
+    out_route.goal_pose.position.z = best_point.z();
   }
 
   // Autoware에서 uuid, allow_modification 등은 상위 레벨에서 세팅하므로

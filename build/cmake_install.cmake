@@ -1,4 +1,4 @@
-# Install script for directory: /home/sujin/Documents/01_GIT/standalone_planner
+# Install script for directory: /home/sujin/Documents/01_GIT/MissionPlanner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/sujin/Documents/01_GIT/standalone_planner/build/external/Rosless-Lanelet2/cmake_install.cmake")
+  include("/home/sujin/Documents/01_GIT/MissionPlanner/build/external/Rosless-Lanelet2/cmake_install.cmake")
 
 endif()
 
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sujin/Documents/01_GIT/standalone_planner/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sujin/Documents/01_GIT/MissionPlanner/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sujin/Documents/01_GIT/standalone_planner
+CMAKE_SOURCE_DIR = /home/sujin/Documents/01_GIT/MissionPlanner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sujin/Documents/01_GIT/standalone_planner/build
+CMAKE_BINARY_DIR = /home/sujin/Documents/01_GIT/MissionPlanner/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles /home/sujin/Documents/01_GIT/standalone_planner/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/MissionPlanner/build/CMakeFiles /home/sujin/Documents/01_GIT/MissionPlanner/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/standalone_planner/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sujin/Documents/01_GIT/MissionPlanner/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -265,53 +265,53 @@ lanelet2_validator/fast:
 	$(MAKE) $(MAKESILENT) -f external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/build.make external/Rosless-Lanelet2/lanelet2_validation/CMakeFiles/lanelet2_validator.dir/build
 .PHONY : lanelet2_validator/fast
 
-src/arrival_checker_core.o: src/arrival_checker_core.cpp.o
-.PHONY : src/arrival_checker_core.o
+src/arrival_checker.o: src/arrival_checker.cpp.o
+.PHONY : src/arrival_checker.o
 
 # target to build an object file
-src/arrival_checker_core.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.o
-.PHONY : src/arrival_checker_core.cpp.o
+src/arrival_checker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/arrival_checker.cpp.o
+.PHONY : src/arrival_checker.cpp.o
 
-src/arrival_checker_core.i: src/arrival_checker_core.cpp.i
-.PHONY : src/arrival_checker_core.i
+src/arrival_checker.i: src/arrival_checker.cpp.i
+.PHONY : src/arrival_checker.i
 
 # target to preprocess a source file
-src/arrival_checker_core.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.i
-.PHONY : src/arrival_checker_core.cpp.i
+src/arrival_checker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/arrival_checker.cpp.i
+.PHONY : src/arrival_checker.cpp.i
 
-src/arrival_checker_core.s: src/arrival_checker_core.cpp.s
-.PHONY : src/arrival_checker_core.s
+src/arrival_checker.s: src/arrival_checker.cpp.s
+.PHONY : src/arrival_checker.s
 
 # target to generate assembly for a file
-src/arrival_checker_core.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/arrival_checker_core.cpp.s
-.PHONY : src/arrival_checker_core.cpp.s
+src/arrival_checker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/arrival_checker.cpp.s
+.PHONY : src/arrival_checker.cpp.s
 
-src/default_planner_core.o: src/default_planner_core.cpp.o
-.PHONY : src/default_planner_core.o
+src/default_planner.o: src/default_planner.cpp.o
+.PHONY : src/default_planner.o
 
 # target to build an object file
-src/default_planner_core.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.o
-.PHONY : src/default_planner_core.cpp.o
+src/default_planner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/default_planner.cpp.o
+.PHONY : src/default_planner.cpp.o
 
-src/default_planner_core.i: src/default_planner_core.cpp.i
-.PHONY : src/default_planner_core.i
+src/default_planner.i: src/default_planner.cpp.i
+.PHONY : src/default_planner.i
 
 # target to preprocess a source file
-src/default_planner_core.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.i
-.PHONY : src/default_planner_core.cpp.i
+src/default_planner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/default_planner.cpp.i
+.PHONY : src/default_planner.cpp.i
 
-src/default_planner_core.s: src/default_planner_core.cpp.s
-.PHONY : src/default_planner_core.s
+src/default_planner.s: src/default_planner.cpp.s
+.PHONY : src/default_planner.s
 
 # target to generate assembly for a file
-src/default_planner_core.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/default_planner_core.cpp.s
-.PHONY : src/default_planner_core.cpp.s
+src/default_planner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/default_planner.cpp.s
+.PHONY : src/default_planner.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -337,53 +337,53 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/mission_planner_core.o: src/mission_planner_core.cpp.o
-.PHONY : src/mission_planner_core.o
+src/mission_planner.o: src/mission_planner.cpp.o
+.PHONY : src/mission_planner.o
 
 # target to build an object file
-src/mission_planner_core.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.o
-.PHONY : src/mission_planner_core.cpp.o
+src/mission_planner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/mission_planner.cpp.o
+.PHONY : src/mission_planner.cpp.o
 
-src/mission_planner_core.i: src/mission_planner_core.cpp.i
-.PHONY : src/mission_planner_core.i
+src/mission_planner.i: src/mission_planner.cpp.i
+.PHONY : src/mission_planner.i
 
 # target to preprocess a source file
-src/mission_planner_core.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.i
-.PHONY : src/mission_planner_core.cpp.i
+src/mission_planner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/mission_planner.cpp.i
+.PHONY : src/mission_planner.cpp.i
 
-src/mission_planner_core.s: src/mission_planner_core.cpp.s
-.PHONY : src/mission_planner_core.s
+src/mission_planner.s: src/mission_planner.cpp.s
+.PHONY : src/mission_planner.s
 
 # target to generate assembly for a file
-src/mission_planner_core.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/mission_planner_core.cpp.s
-.PHONY : src/mission_planner_core.cpp.s
+src/mission_planner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/mission_planner.cpp.s
+.PHONY : src/mission_planner.cpp.s
 
-src/route_handler_core.o: src/route_handler_core.cpp.o
-.PHONY : src/route_handler_core.o
+src/route_handler.o: src/route_handler.cpp.o
+.PHONY : src/route_handler.o
 
 # target to build an object file
-src/route_handler_core.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler_core.cpp.o
-.PHONY : src/route_handler_core.cpp.o
+src/route_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler.cpp.o
+.PHONY : src/route_handler.cpp.o
 
-src/route_handler_core.i: src/route_handler_core.cpp.i
-.PHONY : src/route_handler_core.i
+src/route_handler.i: src/route_handler.cpp.i
+.PHONY : src/route_handler.i
 
 # target to preprocess a source file
-src/route_handler_core.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler_core.cpp.i
-.PHONY : src/route_handler_core.cpp.i
+src/route_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler.cpp.i
+.PHONY : src/route_handler.cpp.i
 
-src/route_handler_core.s: src/route_handler_core.cpp.s
-.PHONY : src/route_handler_core.s
+src/route_handler.s: src/route_handler.cpp.s
+.PHONY : src/route_handler.s
 
 # target to generate assembly for a file
-src/route_handler_core.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler_core.cpp.s
-.PHONY : src/route_handler_core.cpp.s
+src/route_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mission_planner.dir/build.make CMakeFiles/mission_planner.dir/src/route_handler.cpp.s
+.PHONY : src/route_handler.cpp.s
 
 # Help Target
 help:
@@ -405,21 +405,21 @@ help:
 	@echo "... lanelet2_validation"
 	@echo "... lanelet2_validator"
 	@echo "... mission_planner"
-	@echo "... src/arrival_checker_core.o"
-	@echo "... src/arrival_checker_core.i"
-	@echo "... src/arrival_checker_core.s"
-	@echo "... src/default_planner_core.o"
-	@echo "... src/default_planner_core.i"
-	@echo "... src/default_planner_core.s"
+	@echo "... src/arrival_checker.o"
+	@echo "... src/arrival_checker.i"
+	@echo "... src/arrival_checker.s"
+	@echo "... src/default_planner.o"
+	@echo "... src/default_planner.i"
+	@echo "... src/default_planner.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/mission_planner_core.o"
-	@echo "... src/mission_planner_core.i"
-	@echo "... src/mission_planner_core.s"
-	@echo "... src/route_handler_core.o"
-	@echo "... src/route_handler_core.i"
-	@echo "... src/route_handler_core.s"
+	@echo "... src/mission_planner.o"
+	@echo "... src/mission_planner.i"
+	@echo "... src/mission_planner.s"
+	@echo "... src/route_handler.o"
+	@echo "... src/route_handler.i"
+	@echo "... src/route_handler.s"
 .PHONY : help
 
 
